@@ -1,7 +1,7 @@
 # Psythereum :sparkles:
 
 ## Introduction :wave:
-Psythereum is a platform where three kinds of people can help each other: people who need therapy, therapists who provide it, and researchers who want data. It's like a community where everyone works together. Patients get the help they need, therapists do their job, and researchers get information. This helps everyone involved.
+Psythereum is a groundbreaking platform designed to facilitate psychological therapy research. Our platform enables researchers to access valuable data extracted from therapy sessions conducted between psychiatrists and patients. With a strong emphasis on privacy and anonymity, the recorded data is fully anonymized, ensuring the protection of personal information. :lock:
 
 ## Problem Statement :thinking:
 Psythereum primarily addresses the following challenges:
