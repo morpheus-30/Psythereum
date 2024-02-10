@@ -5,11 +5,23 @@ Psythereum is a platform where three kinds of people can help each other: people
 
 
 ## Problem Statement
-Psythereum primarily addresses the challenges faced by researchers, while simultaneously tackling issues for all participant types. Patients seek anonymity and confidentiality, concerned about who can access their recordings, and they may feel insecure about meeting a psychiatrist in person. Psychiatrists encounter flexibility issues with working hours. Researchers lack access to authentic, consistent, and up-to-date data.
+Psythereum primarily addresses the following challenges:
+
+- Patients seek anonymity and confidentiality, concerned about who can access their recordings, and they may feel insecure about meeting a psychiatrist in person.
+- Psychiatrists encounter flexibility issues with working hours.
+- Researchers lack access to authentic, consistent, and up-to-date data.
 
 
 ## Approach
 To address the challenges faced by patients, therapists, and researchers, we propose building a secure and anonymous platform. This platform will enable users to have confidential sessions with their psychiatrists, with session recordings securely uploaded to a decentralized system. The recorded data will be fully encrypted, ensuring privacy and security. Researchers will have access to this anonymized and encrypted data, providing them with valuable insights for their studies.
+
+The platform will offer the following benefits:
+
+- Secure and anonymous sessions for patients
+- Confidentiality and privacy of session recordings
+- Decentralized storage system for secure data upload
+- Fully encrypted data for enhanced security
+- Access to anonymized and encrypted data for researchers
 
 ## Technologies Used
 - React
