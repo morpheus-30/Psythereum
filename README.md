@@ -1,16 +1,16 @@
-# Project Name
+# Psythereum
 
 ## Introduction
+Psythereum is a platform where three kinds of people can help each other: people who need therapy, therapists who provide it, and researchers who want data. It's like a community where everyone works together. Patients get the help they need, therapists do their job, and researchers get information. This helps everyone involved.
 
-// TODO: Add an introduction to your project.
 
 ## Problem Statement
 
-// TODO: Describe the problem your project aims to solve.
+
 
 ## Approach
 
-// TODO: Explain how you tackled the problem and the approach you took.
+
 
 ## Technologies Used
 
