@@ -4,7 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract Recordings {
 
-    uint[] arr;
+    string[] arr;
 
     struct user {
         string proof1;
@@ -26,18 +26,18 @@ contract Recordings {
         uint sessionCount;
     }
 
-    mapping (uint => recording) private recordingsMap;
+    mapping (string => recording) private recordingsMap;
     mapping (address => user) private usersMap;
 
-    event recordingCreated(uint uid);
+    event recordingCreated(string uid);
     event userCreated(address id);
 
-    function createRecording(uint uid, uint id, uint key, string memory title) public {
-        recordingsMap[uid].id= id;
-        recordingsMap[uid].title= title;
-        recordingsMap[uid].key= key;
-        arr.push(uid);
-        emit recordingCreated(uid);
+    function createRecording(string memory cid, uint id, uint key, string memory title) public {
+        recordingsMap[cid].id= id;
+        recordingsMap[cid].title= title;
+        recordingsMap[cid].key= key;
+        arr.push(cid);
+        emit recordingCreated(cid);
     }
 
     function createUser(string memory email, string memory proof1, string memory proof2 ) public {
@@ -52,8 +52,12 @@ contract Recordings {
         usersMap[uid].isVerified= true;
     }
 
-    function getRecordings() view public returns (uint[] memory) {
+    function getRecordings() view public returns (string[] memory) {
         return arr;
+    }
+
+    function getRecordingData(string memory cid) view public returns (uint, string memory) {
+        return (recordingsMap[cid].key, recordingsMap[cid].title);
     }
 
 }

@@ -12,9 +12,9 @@ var SmartContractABI = [
 		"inputs": [
 			{
 				"indexed": false,
-				"internalType": "uint256",
+				"internalType": "string",
 				"name": "uid",
-				"type": "uint256"
+				"type": "string"
 			}
 		],
 		"name": "recordingCreated",
@@ -36,9 +36,9 @@ var SmartContractABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
-				"name": "uid",
-				"type": "uint256"
+				"internalType": "string",
+				"name": "cid",
+				"type": "string"
 			},
 			{
 				"internalType": "uint256",
@@ -85,13 +85,37 @@ var SmartContractABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "cid",
+				"type": "string"
+			}
+		],
+		"name": "getRecordingData",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "getRecordings",
 		"outputs": [
 			{
-				"internalType": "uint256[]",
+				"internalType": "string[]",
 				"name": "",
-				"type": "uint256[]"
+				"type": "string[]"
 			}
 		],
 		"stateMutability": "view",
@@ -140,6 +164,13 @@ app.post('/setRecording', async (req, res)=>{
 
 app.get('/getRecording', async (req, res)=>{
     var data = await myContract.methods.getRecordings().call();
+    console.log(data);
+    res.send({status: 100, data: data});
+})
+
+app.post('/getRecordingData', async (req, res)=>{
+	const {cid} = req.body.params;
+    var data = await myContract.methods.getRecordingData(cid).call();
     console.log(data);
     res.send({status: 100, data: data});
 })
